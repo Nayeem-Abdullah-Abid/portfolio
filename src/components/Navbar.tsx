@@ -7,7 +7,6 @@ import Link from "next/link";
 const links = [
     { label: "Home", href: "/", target: "_self" },
     { label: "Skills", href: "/skills", target: "_self" },
-    { label: "Work", href: "/#work", target: "_self" },
     { label: "Contact", href: "https://forms.gle/AwQcmw97KT9dTj4R9", target: "_blank" },
 ];
 

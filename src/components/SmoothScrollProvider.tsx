@@ -8,9 +8,11 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
         <ReactLenis
             root
             options={{
-                lerp: 0.1,
-                duration: 1.5,
+                lerp: 0.04, // Lower lerp means smoother and heavier scrolling
+                duration: 2.5,
                 smoothWheel: true,
+                wheelMultiplier: 1.6, // Doubled scrolling speed
+                touchMultiplier: 2.0,
             }}
         >
             {children}
