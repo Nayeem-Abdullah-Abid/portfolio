@@ -1,7 +1,10 @@
 "use client";
 
+import { useRef, useEffect } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useLenis } from "lenis/react";
+
 const projects = [
     {
         id: 1,
@@ -34,8 +37,24 @@ const projects = [
 ];
 
 export function Projects() {
+    const containerRef = useRef<HTMLElement>(null);
+    const isInView = useInView(containerRef, { margin: "-20%" }); // Trigger when 20% into the screen
+    const lenis = useLenis();
+    const hasScrolled = useRef(false);
+
+    useEffect(() => {
+        if (isInView && lenis && !hasScrolled.current) {
+            hasScrolled.current = true;
+            lenis.scrollTo(containerRef.current!, {
+                duration: 1.5,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Expo ease out
+                offset: 0,
+            });
+        }
+    }, [isInView, lenis]);
+
     return (
-        <section className="relative w-full min-h-screen bg-[#121212] py-32 px-6 md:px-12 z-20">
+        <section ref={containerRef} id="work" className="relative w-full min-h-screen bg-[#121212] py-32 px-6 md:px-12 z-20">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-20">
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">Selected Works</h2>

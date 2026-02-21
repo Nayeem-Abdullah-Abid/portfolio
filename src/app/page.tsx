@@ -21,9 +21,7 @@ export default function Home() {
       {/* 
         Below the fold content 
       */}
-      <div id="work">
-        <Projects />
-      </div>
+      <Projects />
 
       {/* Daily Motivational Quote */}
       <IslamicQuote />

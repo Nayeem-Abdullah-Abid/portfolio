@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import { CustomCursor } from "@/components/CustomCursor";
+import { SurpriseMe } from "@/components/SurpriseMe";
 
 export default function RootLayout({
   children,
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body suppressHydrationWarning className={`${inter.variable} font-sans antialiased text-white bg-[#121212] overflow-x-hidden`}>
         <SmoothScrollProvider>
           <CustomCursor />
+          <SurpriseMe />
           {children}
         </SmoothScrollProvider>
       </body>
