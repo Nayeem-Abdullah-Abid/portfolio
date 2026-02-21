@@ -1,5 +1,7 @@
-import Image from "next/image";
+"use client";
 
+import Image from "next/image";
+import { motion } from "framer-motion";
 const projects = [
     {
         id: 1,
@@ -42,7 +44,11 @@ export function Projects() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                     {projects.map((project, index) => (
-                        <div
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.8, delay: index * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
                             key={project.id}
                             className={`group relative flex flex-col rounded-2xl p-8 overflow-hidden transition-all duration-500 hover:-translate-y-2 cursor-pointer border border-white/5 bg-white/[0.02] backdrop-blur-xl ${index % 2 !== 0 ? 'md:mt-24' : ''}`}
                         >
@@ -65,7 +71,7 @@ export function Projects() {
                                     {project.description}
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

@@ -4,9 +4,12 @@ import { Contact } from "@/components/Contact";
 import { Navbar } from "@/components/Navbar";
 import { IslamicQuote } from "@/components/IslamicQuote";
 
+import { Preloader } from "@/components/Preloader";
+
 export default function Home() {
   return (
     <main className="w-full bg-[#121212]">
+      <Preloader />
       <Navbar />
 
       {/* 

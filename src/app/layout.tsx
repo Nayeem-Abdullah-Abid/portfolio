@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description: "High-end Scrollytelling Personal Portfolio",
 };
 
+import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
+import { CustomCursor } from "@/components/CustomCursor";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,8 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning className={`${inter.variable} font-sans antialiased text-white bg-[#121212]`}>
-        {children}
+      <body suppressHydrationWarning className={`${inter.variable} font-sans antialiased text-white bg-[#121212] overflow-x-hidden`}>
+        <SmoothScrollProvider>
+          <CustomCursor />
+          {children}
+        </SmoothScrollProvider>
       </body>
     </html>
   );
