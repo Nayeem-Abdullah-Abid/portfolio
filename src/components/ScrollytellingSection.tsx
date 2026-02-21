@@ -104,7 +104,7 @@ export function ScrollytellingSection({ totalFrames = 75 }: { totalFrames?: numb
     }, [images, currentIndex]);
 
     return (
-        <section ref={containerRef} className="relative w-full bg-[#121212]" style={{ height: "500vh" }}>
+        <section ref={containerRef} className="relative w-full bg-black/10 backdrop-blur-sm" style={{ height: "500vh" }}>
             <div className="sticky top-0 w-full h-screen overflow-hidden">
                 {/* Render Canvas below the overlay text */}
                 <canvas

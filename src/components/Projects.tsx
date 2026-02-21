@@ -4,6 +4,7 @@ import { useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useLenis } from "lenis/react";
+import { NeonWaves } from "@/components/NeonWaves";
 
 const projects = [
     {
@@ -54,8 +55,10 @@ export function Projects() {
     }, [isInView, lenis]);
 
     return (
-        <section ref={containerRef} id="work" className="relative w-full min-h-screen bg-[#121212] py-32 px-6 md:px-12 z-20">
-            <div className="max-w-7xl mx-auto">
+        <section ref={containerRef} id="work" className="relative w-full min-h-screen bg-black/20 backdrop-blur-xl border-t border-white/5 py-32 px-6 md:px-12 z-20 overflow-hidden">
+            <NeonWaves />
+
+            <div className="relative max-w-7xl mx-auto z-10">
                 <div className="mb-20">
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">Selected Works</h2>
                     <div className="w-full h-[1px] bg-white/10" />

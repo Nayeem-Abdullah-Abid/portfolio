@@ -2,18 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-const codeSnippets = [
-    "const", "let", "var", "function", "return", "if", "else", "for", "while",
-    "import", "export", "class", "extends", "implements", "interface", "type",
-    "async", "await", "try", "catch", "new", "this", "super", "null", "undefined",
-    "true", "false", "React", "useState", "useEffect", "useRef", "useMemo",
-    "Widget", "StatelessWidget", "StatefulWidget", "build", "BuildContext",
-    "Container", "Scaffold", "AppBar", "Text", "Column", "Row", "ListView",
-    "=>", "{", "}", "[", "]", "(", ")", ";", ":", "=", "+", "-", "*", "/",
-    // Add some random hex codes and numbers
-    "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
-    "0x00", "0xFF", "0x2A"
-];
+const codeSnippets = ["0", "1"];
 
 export function MatrixRain() {
     const canvasRef = useRef<HTMLCanvasElement>(null);

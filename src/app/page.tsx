@@ -3,6 +3,7 @@ import { Projects } from "@/components/Projects";
 import { Contact } from "@/components/Contact";
 import { Navbar } from "@/components/Navbar";
 import { IslamicQuote } from "@/components/IslamicQuote";
+import { PrayerTimes } from "@/components/PrayerTimes";
 
 import { Preloader } from "@/components/Preloader";
 
@@ -25,6 +26,9 @@ export default function Home() {
 
       {/* Daily Motivational Quote */}
       <IslamicQuote />
+
+      {/* Prayer Times Section for BG Time */}
+      <PrayerTimes />
 
       {/* 
         Footer / Contact

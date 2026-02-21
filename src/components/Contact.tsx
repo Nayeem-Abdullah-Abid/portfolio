@@ -7,7 +7,7 @@ import { ReportProblemButton } from "@/components/ReportProblemButton";
 
 export function Contact() {
     return (
-        <section className="relative w-full min-h-[20vh] bg-[#121212] py-8 px-6 md:px-12 z-20 flex flex-col items-center justify-center border-t border-white/10 overflow-hidden">
+        <section className="relative w-full min-h-[20vh] bg-black/40 backdrop-blur-2xl py-8 px-6 md:px-12 z-20 flex flex-col items-center justify-center border-t border-white/10 overflow-hidden shadow-[0_-20px_40px_rgba(0,0,0,0.3)]">
             <MatrixRain />
             <div className="max-w-4xl mx-auto text-center relative z-10 w-full flex flex-col items-center">
                 <motion.h2
